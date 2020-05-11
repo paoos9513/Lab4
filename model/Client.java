@@ -6,6 +6,7 @@ public class Client extends Person{
 
     private String phoneNumber;
     private String email;
+
     ArrayList<Vehicle> vehicles = new ArrayList<>();
     public Client(String name, String lastName, String id, String phoneNumber, String email) {
         super(name, lastName,id);
@@ -29,5 +30,15 @@ public class Client extends Person{
         return vehicles;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setVehicles(ArrayList<Vehicle> vehicles) {
+        this.vehicles = vehicles;
+    }
 }
