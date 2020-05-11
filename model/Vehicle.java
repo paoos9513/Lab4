@@ -10,16 +10,17 @@ public class Vehicle {
     private String typeFuel;
     private String owner;
     private String licensePlate;
+    private boolean isUsed;
 
 
-    public Vehicle(String brand, String model, int basePrice, int cylinder, String typeFuel, String owner, String licensePlate) {
+    public Vehicle(String brand, String model, int basePrice, int cylinder, String typeFuel,  String licensePlate, boolean isUsed) {
         this.brand = brand;
         this.model = model;
-        this.basePrice = basePrice;
         this.cylinder = cylinder;
         this.typeFuel = typeFuel;
-        this.owner = owner;
         this.licensePlate = licensePlate;
+        this.isUsed = isUsed;
+        this.basePrice = basePrice;
     }
 
     public void setTotalPrice(int totalPrice) {
@@ -84,5 +85,13 @@ public class Vehicle {
 
     public void setLicensePlate(String licensePlate) {
         this.licensePlate = licensePlate;
+    }
+
+    public boolean isUsed() {
+        return isUsed;
+    }
+
+    public void setUsed(boolean used) {
+        isUsed = used;
     }
 }

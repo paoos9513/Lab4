@@ -9,7 +9,6 @@ public class Company {
     private double totalEarnings;
     private int salesNumber;
     private Seller[] arraySeller = new Seller[10];
-
     //-----------------------------------------Arraylist de clientes y vendedores---------------------------------------
 
     private ArrayList<Client> clients = new ArrayList<>();
@@ -33,8 +32,9 @@ public class Company {
         arraySeller[6] = new Seller("Stefa","Oviedo","13431343",0);
         arraySeller[7] = new Seller("Leidy","Osorio","1353343",0);
         arraySeller[8] = new Seller("Camilo","Cordoba","2443343",0);
-        arraySeller[9] = new Seller("Andres","Aristizabal","134123343",0);
+        arraySeller[9] = new Seller("Joe","Elmejor","134123343",0);
 
+        initVehicles();
     }
     //--------------------------------------------Metodo para agregar vehiculos-----------------------------------------
 
@@ -44,7 +44,7 @@ public class Company {
     }
 
     //---------------------------------------Vehiculos existentes en la compañia----------------------------------------
-    public void existingVehicleS(){
+    public void initVehicles(){
 
         vehicles.add(new Car("Mazda",
                 "2020",
@@ -52,11 +52,11 @@ public class Company {
                 2000,
                 "Electrico",
                 "Sin asignar",
-                "Sin asignar",
                 0,
                 5,
                 "Camioneta",
-                true)
+                true,
+                false)
         );
 
         vehicles.add(new Car("Toyota",
@@ -64,11 +64,11 @@ public class Company {
                 550000,
                 2500,
                 "Hibrido",
-                "Sin asignar",
                 "VCR 456",
                 30000,
                 5,
                 "Camioneta",
+                false,
                 true)
         );
 
@@ -77,10 +77,10 @@ public class Company {
                 250000,
                 1500,
                 "Gasolina",
-                "Sin asignar",
                 "Sin Asignar",
                 0,
-                "Estandar")
+                "Estandar",
+                false)
         );
 
         vehicles.add(new Motorcycle("Motocross",
@@ -88,12 +88,18 @@ public class Company {
                 200000,
                 1500,
                 "Gasolina",
-                "Sin asignar",
                 "CDR 90C",
                 2000,
-                "Deportiva")
+                "Deportiva",
+                true)
         );
 
+    }
+
+    public void addCarToClient(Vehicle vehicle) {
+        for (int i = 0; i < clients.size(); i++){
+            clients.get(i).addVehicle(vehicle);
+        }
     }
 
     //---------------------------------------------Metodos get y set----------------------------------------------------
@@ -145,7 +151,7 @@ public class Company {
         this.arraySeller = arraySeller;
     }
 
-    public ArrayList<Vehicle> getVehicles() {
+    public ArrayList<Vehicle> getVehicles(){
         return vehicles;
     }
 
