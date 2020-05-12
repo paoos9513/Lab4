@@ -34,7 +34,7 @@ public class Main {
 
     public void menu() {
         System.out.println("ingrese la opcion que desea realizar: ");
-        System.out.println("1. Registrar vehículos \n" + "2. Realizar Cotización \n" + "3. Ver Informe \n");
+        System.out.println("1. Registrar vehículos \n" + "2. Realizar Cotización \n" + "3. Ver Informe \n" + "Para terminar presione esc");
         int option = scan.nextInt();
         scan.nextLine();
 
@@ -208,9 +208,7 @@ public class Main {
         selectSeller(client);
 
 
-
     }
-
 
 
     public void  selectSeller(Client client) {
@@ -245,7 +243,7 @@ public class Main {
             Vehicle vehicle = company.getVehicles().get(i);
             if(vehicle instanceof Car && carOrMotorcycle.equalsIgnoreCase("carro")) {
                 Car car = (Car) vehicle;
-                System.out.println("Carro # " + i);
+                System.out.println("|CARRO NUMERO " + i+"|");
                 System.out.println("Marca: " + car.getBrand());
                 System.out.println("Modelo :" + car.getModel());
                 System.out.println("Precio Base: " + car.getBasePrice());
@@ -303,6 +301,7 @@ public class Main {
                 System.out.println("|APELLIDO| " + seller.getLastName());
                 System.out.println("|IDENTIFICACION| " + seller.getId());
 
+                System.out.println(" ");
                 System.out.println("|INFORMACION DEL CLIENTE| " );
                 for (int j = 0; j<seller.getClients().size(); j++){
                     Client client = seller.getClients().get(j);
@@ -312,45 +311,44 @@ public class Main {
                     System.out.println("|TELEFONO| " + client.getPhoneNumber());
                     System.out.println("|EMAIL| " + client.getEmail());
 
+                    System.out.println(" ");
                     System.out.println("|INFORMACION DEL VEHICULO| " );
                     for (int k = 0; k < client.getVehicles().size(); k++) {
                         Vehicle vehicle = client.getVehicles().get(k);
                         if (vehicle instanceof Car) {
                             Car car = (Car) vehicle;
-                            System.out.println("Carro # " + i);
-                            System.out.println("Marca: " + car.getBrand());
-                            System.out.println("Modelo :" + car.getModel());
-                            System.out.println("Precio Base: " + car.getBasePrice());
-                            System.out.println("Tipo de combustible: " + car.getTypeFuel());
-                            System.out.println("Cilindraje: " + car.getCylinder());
-                            System.out.println("Placa: " + car.getLicensePlate());
-                            System.out.println("Vehiculo usado?: " + car.isUsed());
-                            System.out.println("Numero de puertas: " + car.getNumberDoor());
-                            System.out.println("Ventanas polarizadas: " + car.isTintedWindows());
-                            System.out.println("Tipo de caro: " + car.getTypeCar());
-                            System.out.println("El precio total es: " + car.getTotalPrice());
+                            System.out.println("|CARRO NUMERO " + i+"|");
+                            System.out.println("|Marca| " + car.getBrand());
+                            System.out.println("|Modelo| " + car.getModel());
+                            System.out.println("|Precio Base| " + car.getBasePrice());
+                            System.out.println("|Tipo de combustible| " + car.getTypeFuel());
+                            System.out.println("|Cilindraje| " + car.getCylinder());
+                            System.out.println("|Placa| " + car.getLicensePlate());
+                            System.out.println("|Vehiculo usado?| " + car.isUsed());
+                            System.out.println("|Numero de puertas| " + car.getNumberDoor());
+                            System.out.println("|Ventanas polarizadas| " + car.isTintedWindows());
+                            System.out.println("|Tipo de caro| " + car.getTypeCar());
+                            System.out.println("|El precio total es| " + car.getTotalPrice());
                         }
-
+                        System.out.println(" ");
                         if (vehicle instanceof Motorcycle) {
                             Motorcycle motorcycle = (Motorcycle) vehicle;
-                            System.out.println("Moto # " + i);
-                            System.out.println("Marca: " + motorcycle.getBrand());
-                            System.out.println("Modelo :" + motorcycle.getModel());
-                            System.out.println("Precio Base: " + motorcycle.getBasePrice());
-                            System.out.println("Tipo de combustible: " + motorcycle.getTypeFuel());
-                            System.out.println("Cilindraje: " + motorcycle.getCylinder());
-                            System.out.println("Placa: " + motorcycle.getLicensePlate());
-                            System.out.println("Vehiculo usado?: " + motorcycle.isUsed());
-                            System.out.println("El precio total es: " + motorcycle.getTotalPrice());
+                            System.out.println("|MOTO NUMERO " + i+"|");
+                            System.out.println("|Marca| " + motorcycle.getBrand());
+                            System.out.println("|Modelo| " + motorcycle.getModel());
+                            System.out.println("|Precio Base| " + motorcycle.getBasePrice());
+                            System.out.println("|Tipo de combustible| " + motorcycle.getTypeFuel());
+                            System.out.println("|Cilindraje| " + motorcycle.getCylinder());
+                            System.out.println("|Placa| " + motorcycle.getLicensePlate());
+                            System.out.println("|Vehiculo usado?| " + motorcycle.isUsed());
+                            System.out.println("|El precio total es| " + motorcycle.getTotalPrice());
                         }
                     }
                     System.out.println("");
                 }
             }
-            System.out.println("");
-        }
-        System.out.println("");
-    }
 
+        }
+    }
 
 }

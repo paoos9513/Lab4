@@ -95,7 +95,7 @@ public class Company {
         );
 
     }
-
+    //---------------------------------------------asignar vehiculo al cliente------------------------------------------
     public void addCarToClient(Vehicle vehicle) {
         for (int i = 0; i < clients.size(); i++){
             clients.get(i).addVehicle(vehicle);
@@ -158,6 +158,7 @@ public class Company {
     public void setVehicles(ArrayList<Vehicle> vehicles) {
         this.vehicles = vehicles;
     }
+
 }
 
 

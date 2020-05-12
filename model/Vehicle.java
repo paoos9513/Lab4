@@ -94,4 +94,5 @@ public class Vehicle {
     public void setUsed(boolean used) {
         isUsed = used;
     }
+
 }
