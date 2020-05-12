@@ -7,14 +7,12 @@ public class Car extends Vehicle{
     private String typeCar;
     private boolean tintedWindows;
 
-
     public Car(String brand, String model, int basePrice, int cylinder, String typeFuel, String licensePlate, int kilometers, int numberDoor, String typeCar, boolean tintedWindows, boolean isUsed) {
         super(brand, model, basePrice, cylinder, typeFuel, licensePlate, isUsed);
         this.kilometers = kilometers;
         this.numberDoor = numberDoor;
         this.typeCar = typeCar;
         this.tintedWindows = tintedWindows;
-
     }
 
     public int getKilometers() {
@@ -48,6 +46,4 @@ public class Car extends Vehicle{
     public void setTintedWindows(boolean tintedWindows) {
         this.tintedWindows = tintedWindows;
     }
-
-
 }

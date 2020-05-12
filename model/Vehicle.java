@@ -6,7 +6,7 @@ public class Vehicle {
     private String model;
     private int basePrice;
     private int cylinder;
-    private int totalPrice;
+    private double totalPrice;
     private String typeFuel;
     private String owner;
     private String licensePlate;
@@ -23,11 +23,12 @@ public class Vehicle {
         this.basePrice = basePrice;
     }
 
-    public void setTotalPrice(int totalPrice) {
+    public void setTotalPrice(double totalPrice) {
+
         this.totalPrice=totalPrice;
     }
 
-    public int getTotalPrice(){
+    public double getTotalPrice(){
         return totalPrice;
     }
 
@@ -95,4 +96,56 @@ public class Vehicle {
         isUsed = used;
     }
 
+    public void calculatePriceTotal(){
+        //para carro usado
+       if(isUsed){
+
+           double discount = (totalPrice - (totalPrice * 0.1));
+
+           if (typeFuel.equalsIgnoreCase("electrico")) {
+
+               totalPrice = (basePrice - discount + (basePrice * 0.20));
+
+           }else if(typeFuel.equalsIgnoreCase("hibrido")){
+
+               totalPrice = (basePrice - discount + (basePrice * 0.15));
+
+           }else{
+               totalPrice= (basePrice-discount);
+           }
+
+       }else {
+           //para carro nuevo
+           if (typeFuel.equalsIgnoreCase("electrico")) {
+
+               totalPrice = (basePrice + (basePrice * 0.20));
+
+           }else if(typeFuel.equalsIgnoreCase("hibrido")){
+
+               totalPrice = (basePrice + (basePrice * 0.15));
+
+           }else{
+               totalPrice= (basePrice);
+           }
+
+       }
+
+       //para moto usada
+        if(isUsed){
+
+            totalPrice= (basePrice+(totalPrice*0.02));
+
+        }else {
+            //para carro nuevo
+
+                totalPrice= (basePrice+(totalPrice*0.04));
+
+        }
+
+
+
+    }
+
 }
+
+
