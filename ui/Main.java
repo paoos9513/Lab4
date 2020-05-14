@@ -2,7 +2,6 @@ package ui;
 
 import model.*;
 
-import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.Scanner;
 

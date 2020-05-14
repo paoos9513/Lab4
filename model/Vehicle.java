@@ -225,10 +225,8 @@ public class Vehicle {
      * this method allows me to modify the calculate price total of a vehicle
      *@author: Paola Osorio
      */
-
     public void calculatePriceTotal(){
         //para carro usado
-
 
 
        if(isUsed){
