@@ -8,6 +8,5 @@ public class Sale {
 
     public void initRegister(){
 
-
     }
 }

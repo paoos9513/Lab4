@@ -1,19 +1,24 @@
 package model;
 
+import javax.print.Doc;
+
 public class Vehicle {
 
+    Document document;
     private String brand;
     private String model;
     private int basePrice;
-    private int cylinder;
+    private double cylinder;
     private double totalPrice;
     private String typeFuel;
     private String owner;
     private String licensePlate;
     private boolean isUsed;
+    private double tankCapacity;
 
 
-    public Vehicle(String brand, String model, int basePrice, int cylinder, String typeFuel,  String licensePlate, boolean isUsed) {
+
+    public Vehicle(String brand, String model, int basePrice, int cylinder, String typeFuel,  String licensePlate, boolean isUsed,double tankCapacity) {
         this.brand = brand;
         this.model = model;
         this.cylinder = cylinder;
@@ -21,6 +26,8 @@ public class Vehicle {
         this.licensePlate = licensePlate;
         this.isUsed = isUsed;
         this.basePrice = basePrice;
+        this.tankCapacity=tankCapacity;
+        document = new Document(39000,2020, 0);
     }
 
     public void setTotalPrice(double totalPrice) {
@@ -56,11 +63,11 @@ public class Vehicle {
         return model;
     }
 
-    public int getCylinder(){
+    public double getCylinder(){
         return cylinder;
     }
 
-    public void setCylinder(int cylinder) {
+    public void setCylinder(double cylinder) {
         this.cylinder = cylinder;
     }
 
@@ -77,6 +84,7 @@ public class Vehicle {
     }
 
     public void setTypeFuel(String typeFuel) {
+
         this.typeFuel = typeFuel;
     }
 
@@ -96,8 +104,19 @@ public class Vehicle {
         isUsed = used;
     }
 
+    public double getTankCapacity() {
+        return tankCapacity;
+    }
+
+    public void setTankCapacity(double tankCapacity) {
+        this.tankCapacity = tankCapacity;
+    }
+
+
+
     public void calculatePriceTotal(){
         //para carro usado
+
        if(isUsed){
 
            double discount = (totalPrice - (totalPrice * 0.1));
@@ -139,12 +158,39 @@ public class Vehicle {
             //para carro nuevo
 
                 totalPrice= (basePrice+(totalPrice*0.04));
-
         }
 
 
 
     }
+
+    public void consumeFuel(){
+
+        double consumeFuel;
+
+        // si es carro
+
+
+        if(getTypeFuel().equalsIgnoreCase("gasolina")){
+
+           consumeFuel = (tankCapacity*(cylinder/100));
+
+        }else if(getTypeFuel().equalsIgnoreCase("hibrido")){
+
+            consumeFuel = (tankCapacity*(cylinder/110));
+
+        }
+
+        //para moto
+
+        if (getTypeFuel().equalsIgnoreCase("gasolina")){
+
+            consumeFuel = (tankCapacity*(cylinder/90));
+        }
+
+    }
+
+
 
 }
 

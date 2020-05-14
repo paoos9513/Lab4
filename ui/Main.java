@@ -2,6 +2,7 @@ package ui;
 
 import model.*;
 
+import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -93,6 +94,10 @@ public class Main {
                 int cylinder = scan.nextInt();
                 scan.nextLine();
 
+                System.out.println("Capacidad del tanque (Galones X km)");
+                double tankCapacity = scan.nextDouble();
+                scan.nextLine();
+
                 if (carOrMotorcycle.equalsIgnoreCase("carro")) {
 
                     System.out.println("Numero de puertas");
@@ -108,6 +113,12 @@ public class Main {
                     System.out.println("Tiene ventanas polarizadas? SI/NO");
                     boolean tintedWindows = scan.nextLine().toLowerCase().equals("si");
 
+                    System.out.println("Duracion de bateria por km (SI NO APLICA COLOQUE 0.0)");
+                    double batteryLife= scan.nextDouble();
+                    scan.nextLine();
+
+                    System.out.println("Cargador de carga rapida o normal, (SI NO APLICAR COLOCAR N/A)");
+                    String typeCharge = scan.nextLine();
                     if (isUsed) {
 
                         System.out.println("Kilometraje del vehículo");
@@ -129,7 +140,10 @@ public class Main {
                             numberDoor,
                             typeCar,
                             tintedWindows,
-                            isUsed
+                            isUsed,
+                            tankCapacity,
+                            batteryLife,
+                            typeCharge
                     );
                     company.addVehicle(car);
 
@@ -156,7 +170,8 @@ public class Main {
                             licensePlate,
                             kilometers,
                             typeMotorcycle,
-                            isUsed
+                            isUsed,
+                            tankCapacity
                     );
                     company.addVehicle(motorcycle);
                 }
@@ -167,7 +182,6 @@ public class Main {
 
             }
         }
-
     }
 
 
@@ -254,6 +268,9 @@ public class Main {
                 System.out.println("Numero de puertas: " + car.getNumberDoor());
                 System.out.println("Ventanas polarizadas: " + car.isTintedWindows());
                 System.out.println("Tipo de caro: " + car.getTypeCar());
+                System.out.println("Capacidad de tanque (Galones X km): " + car.getTankCapacity());
+                System.out.println("Duracion de bateria (km) : " + car.getBatteryLife());
+                System.out.println("Cargador de carga Rapida o Normal" + car.getTypeCharge());
                 System.out.println("El precio total es: " + car.getTotalPrice());
             }
 
@@ -267,6 +284,7 @@ public class Main {
                 System.out.println("Cilindraje: " + motorcycle.getCylinder());
                 System.out.println("Placa: " + motorcycle.getLicensePlate());
                 System.out.println("Vehiculo usado?: " + motorcycle.isUsed());
+                System.out.println("Capacidad de tanque (Galones X km)" + motorcycle.getTankCapacity());
                 System.out.println("El precio total es: " + motorcycle.getTotalPrice());
             }
 
@@ -328,6 +346,9 @@ public class Main {
                             System.out.println("|Numero de puertas| " + car.getNumberDoor());
                             System.out.println("|Ventanas polarizadas| " + car.isTintedWindows());
                             System.out.println("|Tipo de caro| " + car.getTypeCar());
+                            System.out.println("|Capacidad de tanque (Galones)| " + car.getTankCapacity());
+                            System.out.println("|Duracion de bateria (km)| " + car.getBatteryLife());
+                            System.out.println("|Cargador de carga rapida o nomarl| " + car.getTypeCharge());
                             System.out.println("|El precio total es| " + car.getTotalPrice());
                         }
                         System.out.println(" ");
@@ -341,14 +362,17 @@ public class Main {
                             System.out.println("|Cilindraje| " + motorcycle.getCylinder());
                             System.out.println("|Placa| " + motorcycle.getLicensePlate());
                             System.out.println("|Vehiculo usado?| " + motorcycle.isUsed());
+                            System.out.println("Capacidad de tanque (Galones)" + motorcycle.getTankCapacity());
                             System.out.println("|El precio total es| " + motorcycle.getTotalPrice());
                         }
                     }
                     System.out.println("");
+
                 }
             }
 
         }
     }
+
 
 }

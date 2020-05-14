@@ -6,8 +6,8 @@ public class Motorcycle extends Vehicle{
     private String typeMotorcycle;
 
 
-    public Motorcycle(String brand, String model, int basePrice, int cylinder, String typeFuel,  String licensePlate, int kilometers, String typeMotorcycle, boolean isUsed) {
-        super(brand, model, basePrice, cylinder, typeFuel,  licensePlate, isUsed);
+    public Motorcycle(String brand, String model, int basePrice, int cylinder, String typeFuel,  String licensePlate, int kilometers, String typeMotorcycle, boolean isUsed,double tankCapacity) {
+        super(brand, model, basePrice, cylinder, typeFuel,  licensePlate, isUsed, tankCapacity);
         this.kilometers = kilometers;
         this.typeMotorcycle = typeMotorcycle;
     }
@@ -27,6 +27,7 @@ public class Motorcycle extends Vehicle{
     public void setTypeMotorcycle(String typeMotorcycle) {
         this.typeMotorcycle = typeMotorcycle;
     }
+
 
 
 }
