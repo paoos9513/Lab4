@@ -8,6 +8,7 @@ public class Car extends Vehicle{
     private boolean tintedWindows;
     private double batteryLife;
     private String typeCharge;
+    private double consumeBattery;
 
     public Car(String brand, String model, int basePrice, int cylinder, String typeFuel, String licensePlate, int kilometers, int numberDoor, String typeCar, boolean tintedWindows, boolean isUsed, double tankCapacity, double batteryLife,String typeCharge) {
         super(brand, model, basePrice, cylinder, typeFuel, licensePlate, isUsed,tankCapacity);
@@ -69,30 +70,33 @@ public class Car extends Vehicle{
         this.typeCharge = typeCharge;
     }
 
-    public void consumeBattery(){
+    public double getConsumeBattery() {
+        return consumeBattery;
+    }
 
-        double consumeBattery;
+
+    public void setConsumeBattery(double consumeBattery){
 
 
         if(getTypeFuel().equalsIgnoreCase("electrico") && getTypeCharge().equalsIgnoreCase("rapida")){
 
-            consumeBattery = ((batteryLife+10)*(getCylinder()/100));
+            this.consumeBattery = ((this.batteryLife+10)*(this.getCylinder()/100));
 
         } else if (getTypeFuel().equalsIgnoreCase("electrico") && getTypeCharge().equalsIgnoreCase("normal")) {
 
-            consumeBattery = ((batteryLife+15)*(getCylinder()/100));
+            this.consumeBattery = ((this.batteryLife+15)*(this.getCylinder()/100));
 
         }else if (getTypeFuel().equalsIgnoreCase("hibrido") && getTypeCharge().equalsIgnoreCase("rapido")){
 
-            consumeBattery = (batteryLife*(getCylinder()/100));
+            this.consumeBattery = (this.batteryLife*(this.getCylinder()/100));
 
         }else if (getTypeFuel().equalsIgnoreCase("hibrido") && getTypeCharge().equalsIgnoreCase("normal")){
 
-            consumeBattery = ((batteryLife+5)*(getCylinder()/100));
+            this.consumeBattery = ((this.batteryLife+5)*(this.getCylinder()/100));
 
         }else {
             System.out.println("Este vehiculo no tiene consumo electrico");
         }
-        
+
     }
 }

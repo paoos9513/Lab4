@@ -114,11 +114,12 @@ public class Main {
                     boolean tintedWindows = scan.nextLine().toLowerCase().equals("si");
 
                     System.out.println("Duracion de bateria por km (SI NO APLICA COLOQUE 0.0)");
-                    double batteryLife= scan.nextDouble();
+                    double batteryLife = scan.nextDouble();
                     scan.nextLine();
 
                     System.out.println("Cargador de carga rapida o normal, (SI NO APLICAR COLOCAR N/A)");
                     String typeCharge = scan.nextLine();
+
                     if (isUsed) {
 
                         System.out.println("Kilometraje del vehículo");
@@ -225,18 +226,18 @@ public class Main {
     }
 
 
-    public void  selectSeller(Client client) {
+    public void selectSeller(Client client) {
 
-        for(int i=0; i<company.getArraySeller().length; i++){
+        for (int i = 0; i < company.getArraySeller().length; i++) {
 
             System.out.println("vendedor #: " + i);
-            System.out.println("Nombre: "+company.getArraySeller()[i].getName());
-            System.out.println("Apellido: "+company.getArraySeller()[i].getLastName());
+            System.out.println("Nombre: " + company.getArraySeller()[i].getName());
+            System.out.println("Apellido: " + company.getArraySeller()[i].getLastName());
 
         }
-        int selectedSeller=scan.nextInt();
+        int selectedSeller = scan.nextInt();
 
-        if(company.getArraySeller()[selectedSeller].canAddClients()){
+        if (company.getArraySeller()[selectedSeller].canAddClients()) {
             company.getArraySeller()[selectedSeller].addClient(client);
         } else {
             System.out.println("Este vendedor no puede tener más clientes, seleccione otro");
@@ -252,12 +253,12 @@ public class Main {
         String carOrMotorcycle = scan.nextLine();
 
         System.out.println("Seleccione el/la " + carOrMotorcycle + " de interés");
-        for (int i=0; i<company.getVehicles().size(); i++){
+        for (int i = 0; i < company.getVehicles().size(); i++) {
 
             Vehicle vehicle = company.getVehicles().get(i);
-            if(vehicle instanceof Car && carOrMotorcycle.equalsIgnoreCase("carro")) {
+            if (vehicle instanceof Car && carOrMotorcycle.equalsIgnoreCase("carro")) {
                 Car car = (Car) vehicle;
-                System.out.println("|CARRO NUMERO " + i+"|");
+                System.out.println("|CARRO NUMERO " + i + "|");
                 System.out.println("Marca: " + car.getBrand());
                 System.out.println("Modelo :" + car.getModel());
                 System.out.println("Precio Base: " + car.getBasePrice());
@@ -269,12 +270,13 @@ public class Main {
                 System.out.println("Ventanas polarizadas: " + car.isTintedWindows());
                 System.out.println("Tipo de caro: " + car.getTypeCar());
                 System.out.println("Capacidad de tanque (Galones X km): " + car.getTankCapacity());
-                System.out.println("Duracion de bateria (km) : " + car.getBatteryLife());
+                System.out.println("Duracion de bateria (km): " + car.getBatteryLife());
                 System.out.println("Cargador de carga Rapida o Normal" + car.getTypeCharge());
+                System.out.println("El consumo de bateria en kilowatts X km es: " + car.getConsumeBattery());
                 System.out.println("El precio total es: " + car.getTotalPrice());
             }
 
-            if(vehicle instanceof Motorcycle && carOrMotorcycle.equalsIgnoreCase("moto")) {
+            if (vehicle instanceof Motorcycle && carOrMotorcycle.equalsIgnoreCase("moto")) {
                 Motorcycle motorcycle = (Motorcycle) vehicle;
                 System.out.println("Moto # " + i);
                 System.out.println("Marca: " + motorcycle.getBrand());
@@ -292,7 +294,7 @@ public class Main {
 
         }
 
-        int vehicleInteresting =scan.nextInt();
+        int vehicleInteresting = scan.nextInt();
         scan.nextLine();
 
         selectedVehicles.add(company.getVehicles().get(vehicleInteresting));
@@ -300,7 +302,7 @@ public class Main {
         System.out.println("Desea añadir otro vehículo? SI/NO");
         String selected = scan.nextLine();
 
-        if (selected.equalsIgnoreCase("si")){
+        if (selected.equalsIgnoreCase("si")) {
             System.out.println("----------SELECCION OTRO VEHÍCULO----------");
             vehicleInterested(selectedVehicles);
         }
@@ -311,17 +313,17 @@ public class Main {
 
     public void showInformation() {
 
-        for (int i = 0; i< company.getArraySeller().length; i++){
+        for (int i = 0; i < company.getArraySeller().length; i++) {
             Seller seller = company.getArraySeller()[i];
-            if(seller.getClients().size()>0){
+            if (seller.getClients().size() > 0) {
                 System.out.println("|INFORMACION DEL VENDEDOR| ");
-                System.out.println("|NOMBRE| "  + seller.getName());
+                System.out.println("|NOMBRE| " + seller.getName());
                 System.out.println("|APELLIDO| " + seller.getLastName());
                 System.out.println("|IDENTIFICACION| " + seller.getId());
 
                 System.out.println(" ");
-                System.out.println("|INFORMACION DEL CLIENTE| " );
-                for (int j = 0; j<seller.getClients().size(); j++){
+                System.out.println("|INFORMACION DEL CLIENTE| ");
+                for (int j = 0; j < seller.getClients().size(); j++) {
                     Client client = seller.getClients().get(j);
                     System.out.println("|NOMBRE| " + client.getName());
                     System.out.println("|APELLIDO| " + client.getLastName());
@@ -330,12 +332,12 @@ public class Main {
                     System.out.println("|EMAIL| " + client.getEmail());
 
                     System.out.println(" ");
-                    System.out.println("|INFORMACION DEL VEHICULO| " );
+                    System.out.println("|INFORMACION DEL VEHICULO| ");
                     for (int k = 0; k < client.getVehicles().size(); k++) {
                         Vehicle vehicle = client.getVehicles().get(k);
                         if (vehicle instanceof Car) {
                             Car car = (Car) vehicle;
-                            System.out.println("|CARRO NUMERO " + i+"|");
+                            System.out.println("|CARRO NUMERO " + i + "|");
                             System.out.println("|Marca| " + car.getBrand());
                             System.out.println("|Modelo| " + car.getModel());
                             System.out.println("|Precio Base| " + car.getBasePrice());
@@ -349,12 +351,13 @@ public class Main {
                             System.out.println("|Capacidad de tanque (Galones)| " + car.getTankCapacity());
                             System.out.println("|Duracion de bateria (km)| " + car.getBatteryLife());
                             System.out.println("|Cargador de carga rapida o nomarl| " + car.getTypeCharge());
+                            System.out.println("El consumo de bateria en kilowatts X km es: " + car.getConsumeBattery());
                             System.out.println("|El precio total es| " + car.getTotalPrice());
                         }
                         System.out.println(" ");
                         if (vehicle instanceof Motorcycle) {
                             Motorcycle motorcycle = (Motorcycle) vehicle;
-                            System.out.println("|MOTO NUMERO " + i+"|");
+                            System.out.println("|MOTO NUMERO " + i + "|");
                             System.out.println("|Marca| " + motorcycle.getBrand());
                             System.out.println("|Modelo| " + motorcycle.getModel());
                             System.out.println("|Precio Base| " + motorcycle.getBasePrice());
@@ -370,9 +373,6 @@ public class Main {
 
                 }
             }
-
         }
     }
-
-
 }
