@@ -32,7 +32,7 @@ public class Seller extends Person{
 
     /**
      * this method checks me if the seller can add another customer
-     *return Client client.size()<=5
+     *@return boolean clients
      *@author Paola Osorio
      */
     public boolean canAddClients() {
