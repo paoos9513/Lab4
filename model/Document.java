@@ -13,7 +13,7 @@ public class Document {
 
     /**
      * this is the constructor method that allows me to give value to attributes
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public Document(double price, int year, int codeDocuments) {
 
@@ -25,7 +25,7 @@ public class Document {
     /**
      * this method gives me the price of the SOAT or technician mechanical
      *@return double price
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public double getPrice() {
         return price;
@@ -34,7 +34,7 @@ public class Document {
     /**
      * this method allows me to modify the price the SOAT or technician mechanical
      *@param price this is a type parameter double. price != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setPrice(double price) {
         this.price = price;
@@ -43,7 +43,7 @@ public class Document {
     /**
      * this method gives me the year of the SOAT or technician mechanical
      *@return int year
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public int getYear() {
         return year;
@@ -52,7 +52,7 @@ public class Document {
     /**
      * this method allows me to modify the year the SOAT or technician mechanical
      *@param year this is a type parameter int. year != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setYear(int year) {
         this.year = year;
@@ -61,7 +61,7 @@ public class Document {
     /**
      * this method gives me the code of the SOAT or technician mechanical
      *@return int codeDocuments
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public int getCodeDocuments() {
         return codeDocuments;
@@ -70,7 +70,7 @@ public class Document {
     /**
      * this method gives me the numbers random of the SOAT or technician mechanical
      *@return int numbers
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public int getNumbers() {
         return numbers;
@@ -79,7 +79,7 @@ public class Document {
     /**
      * this method allows me to modify the number random the SOAT or technician mechanical
      *@param numbers this is a type parameter int. numbers != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setNumbers(int numbers) {
         this.numbers = numbers;
@@ -106,7 +106,7 @@ public class Document {
     /**
      * this method allows me to modify the code Documents the SOAT or technician mechanical
      *@param codeDocuments this is a type parameter int. codeDocuments != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setCodeDocuments(int codeDocuments) {
 

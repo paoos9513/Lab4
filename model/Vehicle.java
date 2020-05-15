@@ -18,7 +18,7 @@ public class Vehicle {
 
     /**
      * this is the constructor method that allows me to give value to attributes
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public Vehicle(String brand, String model, int basePrice, int cylinder, String typeFuel,  String licensePlate, boolean isUsed,double tankCapacity) {
         this.brand = brand;
@@ -34,7 +34,7 @@ public class Vehicle {
     /**
      * this method allows me to modify the total price of a vehicle
      *@param totalPrice this is a type parameter double. totalPrice != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setTotalPrice(double totalPrice) {
         this.totalPrice=totalPrice;
@@ -43,7 +43,7 @@ public class Vehicle {
     /**
      * this method gives me the total price of a vehicle
      *@return double totalPrice
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public double getTotalPrice(){
         return totalPrice;
@@ -52,7 +52,7 @@ public class Vehicle {
     /**
      * this method allows me to modify the price base of a vehicle
      *@param basePrice this is a type parameter int. basePrice != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setBasePrice(int basePrice) {
         this.basePrice=basePrice;
@@ -61,7 +61,7 @@ public class Vehicle {
     /**
      * this method gives me the price base of a vehicle
      *@return int basePrice
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public int getBasePrice(){
         return basePrice;
@@ -70,7 +70,7 @@ public class Vehicle {
     /**
      * this method allows me to modify the brand of a vehicle
      *@param brand this is a type parameter String. brand != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setBrand(String brand) {
         this.brand = brand;
@@ -79,7 +79,7 @@ public class Vehicle {
     /**
      * this method gives me the total price of a vehicle
      *@return String brand
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public String getBrand(){
         return brand;
@@ -88,7 +88,7 @@ public class Vehicle {
     /**
      * this method allows me to modify the model of a vehicle
      *@param model is a type parameter String. model != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setModel(String model) {
         this.model=model;
@@ -97,7 +97,7 @@ public class Vehicle {
     /**
      * this method gives me the model of a vehicle
      *@return String model
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public  String getModel(){
         return model;
@@ -106,7 +106,7 @@ public class Vehicle {
     /**
      * this method gives me the cylinder of a vehicle
      *@return double cylinder
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public double getCylinder(){
         return cylinder;
@@ -115,7 +115,7 @@ public class Vehicle {
     /**
      * this method allows me to modify the cylinder of a vehicle
      *@param cylinder this is a type parameter double. cylinder != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setCylinder(double cylinder) {
         this.cylinder = cylinder;
@@ -124,7 +124,7 @@ public class Vehicle {
     /**
      * this method gives me the owner of a vehicle
      *@return String owner
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public String getOwner() {
         return owner;
@@ -133,7 +133,7 @@ public class Vehicle {
     /**
      * this method allows me to modify the owner of a vehicle
      *@param owner this is a type parameter String. owner != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setOwner(String owner) {
         this.owner = owner;
@@ -142,7 +142,7 @@ public class Vehicle {
     /**
      * this method gives me the type fuel of a vehicle
      *@return String typeFuel
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public String getTypeFuel() {
         return typeFuel;
@@ -151,7 +151,7 @@ public class Vehicle {
     /**
      * this method allows me to modify the type fuel of a vehicle
      *@param typeFuel this is a type parameter String. typeFuel != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setTypeFuel(String typeFuel) {
 
@@ -161,7 +161,7 @@ public class Vehicle {
     /**
      * this method gives me the license plate of a vehicle
      *@return String licensePlate
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public String getLicensePlate() {
         return licensePlate;
@@ -170,7 +170,7 @@ public class Vehicle {
     /**
      * this method allows me to modify the license plate of a vehicle
      *@param licensePlate this is a type parameter String. licensePlate != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setLicensePlate(String licensePlate) {
         this.licensePlate = licensePlate;
@@ -179,7 +179,7 @@ public class Vehicle {
     /**
      * this method gives me about vehicle is used or new
      *@return boolean isUsed
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public boolean isUsed() {
         return isUsed;
@@ -188,7 +188,7 @@ public class Vehicle {
     /**
      * this method allows me to modify about vehicle is used or new
      *@param used this is a type parameter boolean. used != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setUsed(boolean used) {
         isUsed = used;
@@ -197,7 +197,7 @@ public class Vehicle {
     /**
      * this method gives me the tank capacity of a vehicle
      *@return double tankCapacity
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public double getTankCapacity() {
         return tankCapacity;
@@ -206,7 +206,7 @@ public class Vehicle {
     /**
      * this method allows me to modify the thank capacity of a vehicle
      *@param tankCapacity this is a type parameter double. tankCapacity != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setTankCapacity(double tankCapacity) {
         this.tankCapacity = tankCapacity;
@@ -215,7 +215,7 @@ public class Vehicle {
     /**
      * this method gives me the consume fuel of a vehicle
      *@return double consumeFuel
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public double getConsumeFuel() {
         return consumeFuel;
@@ -223,7 +223,7 @@ public class Vehicle {
 
     /**
      * this method allows me to modify the calculate price total of a vehicle
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void calculatePriceTotal(){
         //para carro usado
@@ -277,7 +277,7 @@ public class Vehicle {
     /**
      * this method allows me to modify the cosume fuel of a vehicle
      *@param consumeFuel this is a type parameter double. consumeFuel != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setConsumeFuel(double consumeFuel){
 

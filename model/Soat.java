@@ -6,7 +6,7 @@ public class Soat extends Document{
 
     /**
      * this is the constructor method that allows me to give value to attributes
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public Soat(double price, int year, int codeDocuments, double coverageAccident) {
         super(price, year, codeDocuments);
@@ -16,7 +16,7 @@ public class Soat extends Document{
     /**
      * this method gives me the coverage Accident of a vehicle
      *@return double coverageAccident
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public double getCoverageAccident() {
         return coverageAccident;
@@ -25,7 +25,7 @@ public class Soat extends Document{
     /**
      * this method allows me to modify the coverage accident of a vehicle
      *@param coverageAccident this is a type parameter double. coverageAccident != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setCoverageAccident(double coverageAccident) {
         this.coverageAccident = coverageAccident;
@@ -33,7 +33,7 @@ public class Soat extends Document{
 
     /**
      * this method allows me to modify the code of the SOAT of a vehicle
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setCodeSoat(){
 

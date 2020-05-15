@@ -12,7 +12,7 @@ public class Seller extends Person{
 
     /**
      * this is the constructor method that allows me to give value to attributes
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public Seller(String name, String lastName, String id, int totalSales) {
         super(name, lastName,id);
@@ -22,7 +22,7 @@ public class Seller extends Person{
     /**
      * this method checks me if the seller can add another customer
      *@param client this is a type parameter Client. client != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void addClient (Client client) {
         if(clients.size()<=5) {
@@ -33,7 +33,7 @@ public class Seller extends Person{
     /**
      * this method checks me if the seller can add another customer
      *return Client client.size()<=5
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public boolean canAddClients() {
         return clients.size()<=5;
@@ -42,7 +42,7 @@ public class Seller extends Person{
     /**
      * this method allows me to modify the total sales of the sellers
      *@param totalSales this is a type parameter int. totalSale != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setTotalSales(int totalSales){
         this.totalSales=totalSales;
@@ -51,7 +51,7 @@ public class Seller extends Person{
     /**
      * this method gives me the total sales of the sellers
      *@return int totalSales
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public int getTotalSales(){
         return totalSales;
@@ -61,7 +61,7 @@ public class Seller extends Person{
     /**
      * this method gives me the clients of that have the seller
      *@return ArrayList<Client> client
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public ArrayList<Client> getClients() {
         return clients;
@@ -70,7 +70,7 @@ public class Seller extends Person{
     /**
      * this method allows me to modify the clients of the seller
      *@param clients this is an array of type Client arrayList. clients != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setClients(ArrayList<Client> clients) {
         this.clients = clients;

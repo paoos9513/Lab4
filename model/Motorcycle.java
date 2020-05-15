@@ -7,7 +7,7 @@ public class Motorcycle extends Vehicle{
 
     /**
      * this is the constructor method that allows me to give value to attributes
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public Motorcycle(String brand, String model, int basePrice, int cylinder, String typeFuel,  String licensePlate, int kilometers, String typeMotorcycle, boolean isUsed,double tankCapacity) {
         super(brand, model, basePrice, cylinder, typeFuel,  licensePlate, isUsed, tankCapacity);
@@ -18,7 +18,7 @@ public class Motorcycle extends Vehicle{
     /**
      *this method gives me the kilometers of the motorcycle
      *@return int kilometers
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public int getKilometers() {
         return kilometers;
@@ -27,7 +27,7 @@ public class Motorcycle extends Vehicle{
     /**
      * this method allows me to modify the kilometers of the motorcycle
      *@param kilometers this is a type parameter int. kilometers != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setKilometers(int kilometers) {
         this.kilometers = kilometers;
@@ -36,7 +36,7 @@ public class Motorcycle extends Vehicle{
     /**
      *this method gives me the type of motorcycle
      *@return String typeMotorcycle
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public String getTypeMotorcycle() {
         return typeMotorcycle;
@@ -45,7 +45,7 @@ public class Motorcycle extends Vehicle{
     /**
      * this method allows me to modify the type motorcycle
      *@param typeMotorcycle this is a type parameter String. typeMotorcycle != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setTypeMotorcycle(String typeMotorcycle) {
         this.typeMotorcycle = typeMotorcycle;
