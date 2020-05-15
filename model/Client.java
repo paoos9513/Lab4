@@ -10,7 +10,7 @@ public class Client extends Person{
     ArrayList<Vehicle> vehicles = new ArrayList<>();
     /**
      * this is the constructor method that allows me to give value to attributes
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public Client(String name, String lastName, String id, String phoneNumber, String email) {
         super(name, lastName,id);
@@ -21,7 +21,7 @@ public class Client extends Person{
     /**
      * this is the method that adds me to the vehicles to a client
      * @param vehicle this parameter is of type Vehicle. Vehicle != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void addVehicle(Vehicle vehicle){
         this.vehicles.add(vehicle);
@@ -31,7 +31,7 @@ public class Client extends Person{
     /**
      * this method allows me to modify the phone number of a client
      *@param  phoneNumber this is a type parameter String. phoneNumber != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber=phoneNumber;
@@ -40,7 +40,7 @@ public class Client extends Person{
     /**
      *this method gives me the phone number of the client
      *@return String phoneNumber
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public String getPhoneNumber(){
         return phoneNumber;
@@ -49,7 +49,7 @@ public class Client extends Person{
     /**
      * this method gives me the vehicle of a client
      *@return ArrayList<Vehicle> vehicles
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public ArrayList<Vehicle> getVehicles() {
         return vehicles;
@@ -58,7 +58,7 @@ public class Client extends Person{
     /**
      *this method gives me the email of the client
      *@return String email
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public String getEmail() {
         return email;
@@ -67,7 +67,7 @@ public class Client extends Person{
     /**
      * this method allows me to modify the email of a client
      *@param email this is a type parameter String. email != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setEmail(String email) {
         this.email = email;
@@ -76,7 +76,7 @@ public class Client extends Person{
     /**
      * this method allows me to modify the vehicles of the client
      *@param vehicles this is an array of type Vehicle arrayList. vehicle != null
-     *@author: Paola Osorio
+     *@author Paola Osorio
      */
     public void setVehicles(ArrayList<Vehicle> vehicles) {
         this.vehicles = vehicles;
