@@ -1,5 +1,8 @@
 package model;
 
+/**
+ * The type Motorcycle.
+ */
 public class Motorcycle extends Vehicle{
     //atributos
     private int kilometers;
@@ -7,7 +10,18 @@ public class Motorcycle extends Vehicle{
 
     /**
      * this is the constructor method that allows me to give value to attributes
-     *@author Paola Osorio
+     *
+     * @param brand          the brand
+     * @param model          the model
+     * @param basePrice      the base price
+     * @param cylinder       the cylinder
+     * @param typeFuel       the type fuel
+     * @param licensePlate   the license plate
+     * @param kilometers     the kilometers
+     * @param typeMotorcycle the type motorcycle
+     * @param isUsed         the is used
+     * @param tankCapacity   the tank capacity
+     * @author Paola Osorio
      */
     public Motorcycle(String brand, String model, int basePrice, int cylinder, String typeFuel,  String licensePlate, int kilometers, String typeMotorcycle, boolean isUsed,double tankCapacity) {
         super(brand, model, basePrice, cylinder, typeFuel,  licensePlate, isUsed, tankCapacity);
@@ -16,9 +30,10 @@ public class Motorcycle extends Vehicle{
     }
 
     /**
-     *this method gives me the kilometers of the motorcycle
-     *@return int kilometers
-     *@author Paola Osorio
+     * this method gives me the kilometers of the motorcycle
+     *
+     * @return int kilometers
+     * @author Paola Osorio
      */
     public int getKilometers() {
         return kilometers;
@@ -26,17 +41,19 @@ public class Motorcycle extends Vehicle{
 
     /**
      * this method allows me to modify the kilometers of the motorcycle
-     *@param kilometers this is a type parameter int. kilometers != null
-     *@author Paola Osorio
+     *
+     * @param kilometers this is a type parameter int. kilometers != null
+     * @author Paola Osorio
      */
     public void setKilometers(int kilometers) {
         this.kilometers = kilometers;
     }
 
     /**
-     *this method gives me the type of motorcycle
-     *@return String typeMotorcycle
-     *@author Paola Osorio
+     * this method gives me the type of motorcycle
+     *
+     * @return String typeMotorcycle
+     * @author Paola Osorio
      */
     public String getTypeMotorcycle() {
         return typeMotorcycle;
@@ -44,8 +61,9 @@ public class Motorcycle extends Vehicle{
 
     /**
      * this method allows me to modify the type motorcycle
-     *@param typeMotorcycle this is a type parameter String. typeMotorcycle != null
-     *@author Paola Osorio
+     *
+     * @param typeMotorcycle this is a type parameter String. typeMotorcycle != null
+     * @author Paola Osorio
      */
     public void setTypeMotorcycle(String typeMotorcycle) {
         this.typeMotorcycle = typeMotorcycle;
